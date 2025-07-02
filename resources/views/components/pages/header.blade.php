@@ -1,182 +1,198 @@
-<style>
-    .highlight {
-        background-color: yellow;
-        font-weight: bold;
-    }
-</style>
-
-<header class="nxl-header">
-    <div class="header-wrapper">
-        <div class="header-left d-flex align-items-center gap-4">
-            <a href="javascript:void(0);" class="nxl-head-mobile-toggler" id="mobile-collapse">
-                <div class="hamburger hamburger--arrowturn">
-                    <div class="hamburger-box">
-                        <div class="hamburger-inner"></div>
-                    </div>
+<!-- HEADER START -->
+<header class="site-header header-style-1 mobile-sider-drawer-menu">
+    <div class="top-bar bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="mt-topbar-left">
+                    <ul class="list-unstyled e-p-bx pull-right">
+                        <li><i class="fa fa-envelope"></i> 7xthemehelp@gmail.com</li>
+                        <li><i class="fa fa-phone"></i>(075) 123-7654</li>
+                        <li><i class="fa fa-clock-o"></i>Sun-Sat 9.45 am</li>
+                    </ul>
                 </div>
-            </a>
-            <div class="nxl-navigation-toggle">
-                <a href="javascript:void(0);" id="menu-mini-button">
-                    <i class="feather-align-left"></i>
-                </a>
-                <a href="javascript:void(0);" id="menu-expend-button" style="display: none">
-                    <i class="feather-arrow-right"></i>
-                </a>
-            </div>
-            <div class="nxl-lavel-mega-menu-toggle d-flex d-lg-none">
-                <a href="javascript:void(0);" id="nxl-lavel-mega-menu-open">
-                    <i class="feather-align-left"></i>
-                </a>
-            </div>
-        </div>
-        <div class="header-right ms-auto">
-            <div class="d-flex align-items-center">
-                <div class="nxl-h-item d-none d-sm-flex">
-                    <div class="full-screen-switcher">
-                        <a href="javascript:void(0);" class="nxl-head-link me-0" onclick="$('body').fullScreenHelper('toggle');">
-                            <i class="feather-maximize maximize"></i>
-                            <i class="feather-minimize minimize"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="nxl-h-item dark-light-theme">
-                    <a href="javascript:void(0);" class="nxl-head-link me-0 dark-button">
-                        <i class="feather-moon"></i>
-                    </a>
-                    <a href="javascript:void(0);" class="nxl-head-link me-0 light-button" style="display: none">
-                        <i class="feather-sun"></i>
-                    </a>
-                </div>
-                <div class="dropdown nxl-h-item">
-                    <a href="javascript:void(0);" data-bs-toggle="dropdown" role="button" data-bs-auto-close="outside">
-                        <img src="https://crm.softbooking.uz/resource/img/user.avif" alt="user-image" class="img-fluid user-avtar me-0">
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end nxl-h-dropdown nxl-user-dropdown">
-                        <div class="dropdown-header">
-                            <div class="d-flex align-items-center">
-                                <img src="https://crm.softbooking.uz/resource/img/user.avif" alt="user-image" class="img-fluid user-avtar">
-                                <div>
-                                    <h6 class="m-0 fs-14">{{ auth()->user()->full_name }}</h6>
-                                    <span class="fs-12">{{ auth()->user()->email }}</span>
-                                </div>
-                            </div>
-                        </div>
-                        @auth
-                            <form class="d-block" action="{{ route('logout') }}" method="post">
-                                @csrf
-                                <button type="submit" class="dropdown-item"><i class="feather-log-out"></i>
-                                    Выйти
-                                </button>
-                            </form>
-                        @endauth
-
-                        <div class="dropdown-divider"></div>
-                    </div>
+                <div class="mt-topbar-right">
+                    <div class="appint-btn"><a href="contact-1.html" class="site-button">Make an Appointment</a></div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="sticky-header main-bar-wraper">
+        <div class="main-bar bg-white">
+            <div class="container">
+                <div class="logo-header">
+                    <div class="logo-header-inner logo-header-one">
+                        <a href="index.html">
+                            <img src="/pages/images/logo-light.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- NAV Toggle Button -->
+                <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar icon-bar-first"></span>
+                    <span class="icon-bar icon-bar-two"></span>
+                    <span class="icon-bar icon-bar-three"></span>
+                </button>
+                <!-- ETRA Nav -->
+                <div class="extra-nav">
+                    <div class="extra-cell">
+                        <a href="#search">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </div>
+                    <div class="extra-cell">
+                        <a href="#" class="contact-slide-show"><i class="fa fa-angle-left arrow-animation"></i></a>
+                    </div>
+                </div>
+                <!-- ETRA Nav -->
+
+                <!-- Contact Nav -->
+                <div class="contact-slide-hide " style="background-image:url(/pages/images/background/bg-5.png)">
+                    <div class="contact-nav">
+                        <a href="javascript:void(0)" class="contact_close">&times;</a>
+                        <div class="contact-nav-form p-a30">
+                            <div class="contact-info   m-b30">
+
+                                <div class="mt-icon-box-wraper center p-b30">
+                                    <div class="icon-xs m-b20 scale-in-center"><i class="fa fa-phone"></i></div>
+                                    <div class="icon-content">
+                                        <h5 class="m-t0 font-weight-500">Phone number</h5>
+                                        <p>(075) 123-7654</p>
+                                    </div>
+                                </div>
+
+                                <div class="mt-icon-box-wraper center p-b30">
+                                    <div class="icon-xs m-b20 scale-in-center"><i class="fa fa-envelope"></i></div>
+                                    <div class="icon-content">
+                                        <h5 class="m-t0 font-weight-500">Email address</h5>
+                                        <p>7xthemehelp@gmail.com</p>
+                                    </div>
+                                </div>
+
+                                <div class="mt-icon-box-wraper center p-b30">
+                                    <div class="icon-xs m-b20 scale-in-center"><i class="fa fa-map-marker"></i></div>
+                                    <div class="icon-content">
+                                        <h5 class="m-t0 font-weight-500">Address info</h5>
+                                        <p>201 Liverpool Street, Suite 721, London</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="full-social-bg">
+                                <ul>
+                                    <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#" class="google"><i class="fa fa-google"></i></a></li>
+                                    <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#" class="tumblr"><i class="fa fa-tumblr"></i></a></li>
+                                    <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#" class="youtube"><i class="fa fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="text-center">
+                                <h4 class="font-weight-600">&copy;  2023 7xtheme</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SITE Search -->
+                <div id="search">
+                    <span class="close"></span>
+                    <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
+                        <div class="input-group">
+                            <input value="" name="q" type="search" placeholder="Type to search">
+                            <span class="input-group-btn"><button type="button" class="search-btn"><i class="fa fa-search arrow-animation"></i></button></span>
+                        </div>
+                    </form>
+                </div>
+                <!-- MAIN Vav -->
+                <div class="header-nav navbar-collapse collapse">
+                    <ul class=" nav navbar-nav">
+                        <li class="active">
+                            <a href="javascript:;">Home</a>
+                            <ul class="sub-menu">
+
+                                <li>
+                                    <a href="index.html">Home-1</a>
+                                </li>
+                                <li>
+                                    <a href="index-2.html">Home-2</a>
+                                </li>
+                                <li>
+                                    <a href="index-3.html">Home-3 boxed style</a>
+                                </li>
+                                <li>
+                                    <a href="index-4.html">Home-4</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="about-1.html">About us</a>
+                        </li>
+                        <li>
+                            <a href="services.html">Services</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">Pages</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="javascript:;">Blog</a>
+                                    <ul class="sub-menu has-child">
+                                        <li><a href="blog-grid.html">Blog Grid</a></li>
+                                        <li><a href="blog-listing.html">Blog Listing</a></li>
+                                        <li><a href="blog-masonry.html">Blog Masonry</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="faq.html">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="error-404.html">Error 404</a>
+                                </li>
+                                <li>
+                                    <a href="contact-1.html">Contact us</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">Post detail</a>
+                            <ul class="sub-menu">
+                                <li><a href="post-image.html">Post Image</a></li>
+                                <li><a href="post-gallery.html">Post Gallery</a></li>
+                                <li><a href="post-video.html">Post Video</a></li>
+                                <li><a href="post-right-sidebar.html">Post Right Sidebar</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:;">Projects</a>
+                            <ul class="sub-menu">
+                                <li><a href="project-grid.html">Project Grid</a></li>
+                                <li><a href="project-masonry.html">Project Masonry</a></li>
+                                <li><a href="project-carousel.html">Project Carousel</a></li>
+                                <li><a href="project-classic.html">Project Classic-1</a></li>
+                                <li><a href="project-classic2.html">Project Classic-2</a></li>
+                                <li><a href="project-detail.html">Project Detail</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu-direction">
+                            <a href="javascript:;">Shortcodes</a>
+                            <ul class="sub-menu">
+                                <li><a href="accordian.html">Accordian</a></li>
+                                <li><a href="button.html">Button</a></li>
+                                <li><a href="icon_box.html">Icon box style</a></li>
+                                <li><a href="list_group.html">List group</a></li>
+                                <li><a href="modal_popup.html">Modal popup</a></li>
+                                <li><a href="tabs.html">Tabs</a></li>
+                                <li><a href="table.html">Table</a></li>
+                                <li><a href="video.html">Video  </a></li>
+                                <li><a href="icon-font.html">Icon Font </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </header>
-
-
-<script>
-    const searchInput = document.getElementById('searchInput');
-    const body = document.body;
-    const closeButton = document.querySelector('.search-count');
-
-    searchInput.addEventListener('input', function() {
-        const searchTerm = searchInput.value.trim();
-
-        clearHighlights();
-
-        if (searchTerm !== "") {
-            const matchCount = highlightText(body, searchTerm);
-            closeButton.textContent = `0/${matchCount}`;
-        } else {
-            closeButton.textContent = '';
-        }
-    });
-
-    function clearHighlights() {
-        const highlightedElements = document.querySelectorAll('.highlight');
-        highlightedElements.forEach(element => {
-            const parent = element.parentNode;
-            parent.replaceChild(document.createTextNode(element.textContent), element);
-            parent.normalize();
-        });
-    }
-
-    function highlightText(element, searchTerm) {
-        let matchCount = 0;
-
-        if (element.nodeType === Node.TEXT_NODE) {
-            const index = element.textContent.toLowerCase().indexOf(searchTerm.toLowerCase());
-            if (index !== -1) {
-                const highlightedSpan = document.createElement('span');
-                highlightedSpan.classList.add('highlight');
-                highlightedSpan.textContent = element.textContent.substring(index, index + searchTerm.length);
-
-                const afterText = element.splitText(index);
-                afterText.textContent = afterText.textContent.substring(searchTerm.length);
-
-                element.parentNode.insertBefore(highlightedSpan, afterText);
-                matchCount++;
-            }
-        } else if (element.nodeType === Node.ELEMENT_NODE && element.childNodes) {
-            element.childNodes.forEach(child => {
-                matchCount += highlightText(child, searchTerm); // Har bir chaqiriqda mos tushgan sonni qo'shish
-            });
-        }
-
-        return matchCount; // Umumiy topilgan natijalarni qaytarish
-    }
-
-    // Time
-    let reminderTriggered = false;
-    let timerInterval;
-
-    document.querySelector(".js-taymer").addEventListener("click", evt => {
-        evt.preventDefault();
-
-        if (!reminderTriggered) {
-            let startTime = new Date();
-            reminderTriggered = true;
-
-            const padZero = (num) => (num < 10 ? "0" + num : num);
-
-            const reminder = (number) => {
-                if (number >= 1) {
-                    document.querySelector(".js-timeout").textContent = Number(number);
-                }
-            };
-
-            const updateTime = () => {
-                const currentTime = new Date();
-                const timeDifference = currentTime - startTime;
-
-                let hours = Math.floor((timeDifference / (1000 * 60 * 60)) % 24);
-                let minutes = Math.floor((timeDifference / (1000 * 60)) % 60);
-                let seconds = Math.floor((timeDifference / 1000) % 60);
-
-                hours = padZero(hours);
-                minutes = padZero(minutes);
-                seconds = padZero(seconds);
-
-                if (reminderTriggered) {
-                    document.querySelector('.js-taymer-manage').textContent = `${hours}:${minutes}:${seconds}`;
-                    document.querySelector(".js-taymer").textContent = "Остановить таймер";
-                }
-
-                reminder(hours);
-            };
-            updateTime();
-            timerInterval = setInterval(updateTime, 1000);
-
-        } else {
-            clearInterval(timerInterval);
-            reminderTriggered = false;
-            document.querySelector('.js-taymer-manage').textContent = "Таймеры не запущены!";
-            document.querySelector(".js-taymer").textContent = "Запустить таймер";
-        }
-    });
-</script>
+<!-- HEADER END -->
