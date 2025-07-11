@@ -62,10 +62,6 @@
                                                 </td>
                                                 <td >
                                                     <div class="hstack gap-2 justify-content-end">
-                                                        <a href="{{ route('products.show', $product->id) }}"
-                                                           class="avatar-text avatar-md d-none">
-                                                            <i class="feather feather-eye"></i>
-                                                        </a>
                                                         <a href="{{ route('products.edit', $product->id) }}"
                                                            class="avatar-text avatar-md">
                                                             <i class="feather feather-edit-3"></i>

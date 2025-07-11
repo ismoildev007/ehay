@@ -1,198 +1,250 @@
-<!-- HEADER START -->
-<header class="site-header header-style-1 mobile-sider-drawer-menu">
-    <div class="top-bar bg-gray">
+<!-- Start Header Area -->
+<header class="header-area">
+    <!-- Start Top Header -->
+    <div class="top-header">
         <div class="container">
-            <div class="row">
-                <div class="mt-topbar-left">
-                    <ul class="list-unstyled e-p-bx pull-right">
-                        <li><i class="fa fa-envelope"></i> 7xthemehelp@gmail.com</li>
-                        <li><i class="fa fa-phone"></i>(075) 123-7654</li>
-                        <li><i class="fa fa-clock-o"></i>Sun-Sat 9.45 am</li>
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <ul class="header-left-content">
+                        <li>
+                            <a href="{{ route('about') }}">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('blogs') }}">
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('products') }}">
+                                Product
+                            </a>
+                        </li>
+                        <li>
+                            Need help? Call:
+                            <a href="tel:+1-(514)-321-4567">
+                                <span>+1 (514) 321-4567</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
-                <div class="mt-topbar-right">
-                    <div class="appint-btn"><a href="contact-1.html" class="site-button">Make an Appointment</a></div>
+
+                <div class="col-lg-4">
+                    <div class="header-right-content">
+                        <ul>
+                            <li>
+                                <div class="navbar-option-item navbar-option-language dropdown language-option">
+                                    <button class="dropdown-toggle" type="button" id="language2"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="lang-name">English</span>
+                                    </button>
+
+                                    <div class="dropdown-menu language-dropdown-menu" aria-labelledby="language2">
+                                        <a class="dropdown-item" href="{{ url('locale/en') }}">
+                                            <img src="/assets/images/language/english.png" alt="Image">
+                                            English
+                                        </a>
+                                        <a class="dropdown-item" href="{{ url('locale/uz') }}">
+                                            <img src="/assets/images/language/deutsch.png" alt="Image">
+                                            Uzbek
+                                        </a>
+                                        <a class="dropdown-item" href="{{ url('locale/ru') }}">
+                                            <img src="/assets/images/language/arbic.png" alt="Image">
+                                            Русский
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="sticky-header main-bar-wraper">
-        <div class="main-bar bg-white">
-            <div class="container">
-                <div class="logo-header">
-                    <div class="logo-header-inner logo-header-one">
-                        <a href="index.html">
-                            <img src="/pages/images/logo-light.png" alt="">
+    <!-- Start Top Header -->
+
+    <!-- Start Middle Header -->
+    <div class="middle-header middle-header-style-two">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="/assets/images/logo.png" alt="Image">
                         </a>
                     </div>
                 </div>
-                <!-- NAV Toggle Button -->
-                <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar icon-bar-first"></span>
-                    <span class="icon-bar icon-bar-two"></span>
-                    <span class="icon-bar icon-bar-three"></span>
-                </button>
-                <!-- ETRA Nav -->
-                <div class="extra-nav">
-                    <div class="extra-cell">
-                        <a href="#search">
-                            <i class="fa fa-search"></i>
-                        </a>
-                    </div>
-                    <div class="extra-cell">
-                        <a href="#" class="contact-slide-show"><i class="fa fa-angle-left arrow-animation"></i></a>
-                    </div>
-                </div>
-                <!-- ETRA Nav -->
 
-                <!-- Contact Nav -->
-                <div class="contact-slide-hide " style="background-image:url(/pages/images/background/bg-5.png)">
-                    <div class="contact-nav">
-                        <a href="javascript:void(0)" class="contact_close">&times;</a>
-                        <div class="contact-nav-form p-a30">
-                            <div class="contact-info   m-b30">
-
-                                <div class="mt-icon-box-wraper center p-b30">
-                                    <div class="icon-xs m-b20 scale-in-center"><i class="fa fa-phone"></i></div>
-                                    <div class="icon-content">
-                                        <h5 class="m-t0 font-weight-500">Phone number</h5>
-                                        <p>(075) 123-7654</p>
-                                    </div>
-                                </div>
-
-                                <div class="mt-icon-box-wraper center p-b30">
-                                    <div class="icon-xs m-b20 scale-in-center"><i class="fa fa-envelope"></i></div>
-                                    <div class="icon-content">
-                                        <h5 class="m-t0 font-weight-500">Email address</h5>
-                                        <p>7xthemehelp@gmail.com</p>
-                                    </div>
-                                </div>
-
-                                <div class="mt-icon-box-wraper center p-b30">
-                                    <div class="icon-xs m-b20 scale-in-center"><i class="fa fa-map-marker"></i></div>
-                                    <div class="icon-content">
-                                        <h5 class="m-t0 font-weight-500">Address info</h5>
-                                        <p>201 Liverpool Street, Suite 721, London</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="full-social-bg">
-                                <ul>
-                                    <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#" class="google"><i class="fa fa-google"></i></a></li>
-                                    <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a href="#" class="tumblr"><i class="fa fa-tumblr"></i></a></li>
-                                    <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#" class="youtube"><i class="fa fa-youtube"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="text-center">
-                                <h4 class="font-weight-600">&copy;  2023 7xtheme</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- SITE Search -->
-                <div id="search">
-                    <span class="close"></span>
-                    <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
-                        <div class="input-group">
-                            <input value="" name="q" type="search" placeholder="Type to search">
-                            <span class="input-group-btn"><button type="button" class="search-btn"><i class="fa fa-search arrow-animation"></i></button></span>
-                        </div>
+                <div class="col-lg-9">
+                    <form class="search-box">
+                        <input type="text" name="Search" placeholder="Search Products..." class="form-control">
+                        <button type="submit" class="search-btn">
+                            <i class="ri-search-line"></i>
+                            Search
+                        </button>
                     </form>
                 </div>
-                <!-- MAIN Vav -->
-                <div class="header-nav navbar-collapse collapse">
-                    <ul class=" nav navbar-nav">
-                        <li class="active">
-                            <a href="javascript:;">Home</a>
-                            <ul class="sub-menu">
-
-                                <li>
-                                    <a href="index.html">Home-1</a>
-                                </li>
-                                <li>
-                                    <a href="index-2.html">Home-2</a>
-                                </li>
-                                <li>
-                                    <a href="index-3.html">Home-3 boxed style</a>
-                                </li>
-                                <li>
-                                    <a href="index-4.html">Home-4</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="about-1.html">About us</a>
-                        </li>
-                        <li>
-                            <a href="services.html">Services</a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">Pages</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="javascript:;">Blog</a>
-                                    <ul class="sub-menu has-child">
-                                        <li><a href="blog-grid.html">Blog Grid</a></li>
-                                        <li><a href="blog-listing.html">Blog Listing</a></li>
-                                        <li><a href="blog-masonry.html">Blog Masonry</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="faq.html">FAQ</a>
-                                </li>
-                                <li>
-                                    <a href="error-404.html">Error 404</a>
-                                </li>
-                                <li>
-                                    <a href="contact-1.html">Contact us</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="javascript:;">Post detail</a>
-                            <ul class="sub-menu">
-                                <li><a href="post-image.html">Post Image</a></li>
-                                <li><a href="post-gallery.html">Post Gallery</a></li>
-                                <li><a href="post-video.html">Post Video</a></li>
-                                <li><a href="post-right-sidebar.html">Post Right Sidebar</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="javascript:;">Projects</a>
-                            <ul class="sub-menu">
-                                <li><a href="project-grid.html">Project Grid</a></li>
-                                <li><a href="project-masonry.html">Project Masonry</a></li>
-                                <li><a href="project-carousel.html">Project Carousel</a></li>
-                                <li><a href="project-classic.html">Project Classic-1</a></li>
-                                <li><a href="project-classic2.html">Project Classic-2</a></li>
-                                <li><a href="project-detail.html">Project Detail</a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu-direction">
-                            <a href="javascript:;">Shortcodes</a>
-                            <ul class="sub-menu">
-                                <li><a href="accordian.html">Accordian</a></li>
-                                <li><a href="button.html">Button</a></li>
-                                <li><a href="icon_box.html">Icon box style</a></li>
-                                <li><a href="list_group.html">List group</a></li>
-                                <li><a href="modal_popup.html">Modal popup</a></li>
-                                <li><a href="tabs.html">Tabs</a></li>
-                                <li><a href="table.html">Table</a></li>
-                                <li><a href="video.html">Video  </a></li>
-                                <li><a href="icon-font.html">Icon Font </a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-
             </div>
         </div>
     </div>
+    <!-- Start Middle Header -->
+
+    <!-- Start Navbar Area -->
+    <div class="navbar-area navbar-area-style-two">
+        <div class="mobile-responsive-nav">
+            <div class="container">
+                <div class="mobile-responsive-menu">
+                    <div class="navbar-category">
+                        <button type="button" id="categoryButton-1" data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                            <i class="ri-menu-line"></i>
+                        </button>
+                        <?php
+                        $categories = \App\Models\Category::all();
+                        $lang = app()->getLocale() ?? 'ru';
+                        ?>
+
+                        <div class="navbar-category-dropdown dropdown-menu" aria-labelledby="categoryButton">
+                            <ul>
+                                @if(empty($categories))
+                                    @foreach($categories as $item)
+                                        <li>
+                                            <a href="{{ route('products') }}">{{ $item['name_' . $lang] }}</a>
+                                        </li>
+                                    @endforeach
+                                @else
+                                    <li>
+                                        <a href="{{ route('products') }}">Power Tools</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Hand Tools</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Cordless Tools</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Welding & Soldering</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Gardening Tools</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Air and Gas Powered Tools</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Safety Tools</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Site lighting Tools</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Tools Accessories</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Outdoor Power Equipment</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Safety Tools</a>
+                                    </li>
+                                @endif
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="logo">
+                        <a href="/">
+                            <img src="/assets/images/logo.png" alt="logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="desktop-nav">
+            <div class="container">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <div class="navbar-category">
+                        <button type="button" id="categoryButton" data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                            <i class="ri-menu-line"></i>
+                            ALL CATEGORIES
+                            <i class="arrow-down ri-arrow-down-s-line"></i>
+                        </button>
+
+                        <div class="navbar-category-dropdown dropdown-menu" aria-labelledby="categoryButton">
+                            <ul>
+                                @if(empty($categories))
+                                    @foreach($categories as $item)
+                                        <li>
+                                            <a href="{{ route('products') }}">{{ $item['name_' . $lang] }}</a>
+                                        </li>
+                                    @endforeach
+                                @else
+                                    <li>
+                                        <a href="{{ route('products') }}">Power Tools</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Hand Tools</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Cordless Tools</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Welding & Soldering</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Gardening Tools</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Air and Gas Powered Tools</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Safety Tools</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Site lighting Tools</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Tools Accessories</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Outdoor Power Equipment</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('products') }}">Safety Tools</a>
+                                    </li>
+                                @endif
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="/" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('about') }}" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('products') }}" class="nav-link">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('blogs') }}" class="nav-link">Blogs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('contact') }}" class="nav-link">Contact</a>
+                            </li>
+                        </ul>
+
+                        <div class="others-options">
+                            <span>Free shipping on all orders over $100</span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar Area -->
 </header>
-<!-- HEADER END -->
+<!-- End Header Area -->

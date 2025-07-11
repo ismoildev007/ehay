@@ -13,19 +13,33 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->text('name_uz')->nullable();
-            $table->text('name_ru')->nullable();
-            $table->text('name_en')->nullable();
-            $table->text('content_uz')->nullable();
-            $table->text('content_ru')->nullable();
-            $table->text('content_en')->nullable();
+            $table->foreignId('category_id')->constrained()->onDelete('cascade');
+            $table->string('name_uz');
+            $table->string('name_ru');
+            $table->string('name_en');
+            $table->string('slug_uz')->nullable();
+            $table->string('slug_ru')->nullable();
+            $table->string('slug_en')->nullable();
             $table->text('description_uz')->nullable();
             $table->text('description_ru')->nullable();
             $table->text('description_en')->nullable();
-            $table->text('image')->nullable();
+            $table->text('content_uz')->nullable();
+            $table->text('content_ru')->nullable();
+            $table->text('content_en')->nullable();
+
+            $table->string('image')->nullable(); // Asosiy rasm
+            $table->json('images')->nullable(); // Qo‘shimcha rasmlar
+
+            $table->enum('type', ['Featured', 'Popular Products', 'Best Seller', 'Special Offers', 'Top Rated Products'])->nullable(); // Masalan: "Elektronika", "Mebel"
+
+            $table->decimal('price', 12, 2);
+            $table->unsignedTinyInteger('discount_percent')->nullable(); // 0 - 100
+
+            $table->decimal('final_price', 12, 2)->nullable(); // Chegirmali narx
 
             $table->timestamps();
         });
+
     }
 
     /**

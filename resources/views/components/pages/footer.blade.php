@@ -1,145 +1,211 @@
-<!-- FOOTER START -->
-<footer class="site-footer footer-large  footer-dark	footer-wide">
+<!-- Start Footer  Area -->
+<div class="footer-area pt-54 pb-30">
     <div class="container">
-        <div class="p-a30 call-to-action-wrap bg-no-repeat bg-center site-bg-primary" style="background-image:url(images/background/bg-site.png);">
-            <div class="row">
-                <div class="col-lg-8 col-md-6">
-                    <div class="call-to-action-left text-black">
-                        <h4 class="text-uppercase m-b10 m-t0">Subscribe to our newsletter!</h4>
-                        <span>Never Miss Anything From Construx By Signing Up To Our Newsletter.</span>
-                    </div>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-footer-widget">
+                    <h3>Quick Information</h3>
+
+                    <ul class="info-list">
+                        <li>
+                            <i class="ri-map-pin-line"></i>
+                            2491 Reel Avenue Albuquerque, NM
+                        </li>
+                        <li>
+                            <i class="ri-phone-line"></i>
+                            <a href="tel:+1-(514)-321-4566">+1 (514) 321-4566</a>
+                        </li>
+                        <li>
+                            <i class="ri-mail-send-line"></i>
+                            <a href="/cdn-cgi/l/email-protection#85e0ede4fcc5e0fde4e8f5e9e0abe6eae8"><span
+                                    class="__cf_email__"
+                                    data-cfemail="d6b3beb7af96b3aeb7bba6bab3f8b5b9bb">[email&#160;protected]</span></a>
+                        </li>
+                        <li>
+                            <i class="ri-time-line"></i>
+                            Mon-Sat 8:00 AM - 8:00 PM
+                        </li>
+                    </ul>
+
+                    <ul class="social-link">
+                        <li>
+                            <span>Stay connected:</span>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.twitter.com/" target="_blank">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/" target="_blank">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-footer-widget">
+                    <h3>Information</h3>
+
+                    <ul class="import-link">
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="order-tracking.html">Order Tracking</a>
+                        </li>
+                        <li>
+                            <a href="terms-conditions.html">Terms & Conditions</a>
+                        </li>
+                        <li>
+                            <a href="store-location.html">Store Location</a>
+                        </li>
+                        <li>
+                            <a href="privacy-policy.html">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="faq.html">Delivery Information</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-footer-widget">
+                    <h3>Customer Service</h3>
+
+                    <ul class="import-link">
+                        <li>
+                            <a href="faq.html">Help Center</a>
+                        </li>
+                        <li>
+                            <a href="products.html">Products</a>
+                        </li>
+                        <li>
+                            <a href="terms-conditions.html">Money-back Guarantee!</a>
+                        </li>
+                        <li>
+                            <a href="blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="privacy-policy.html">Accessibility</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-footer-widget">
+                    <h3>Download App On Mobile</h3>
+                    <p>30% discount on your first order</p>
+
+                    <ul class="app-btn">
+                        <li>
+                            <a href="https://www.apple.com/store" target="_blank">
+                                <img src="assets/images/app-store.png" alt="Image">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://play.google.com/store/apps" target="_blank">
+                                <img src="assets/images/google-play.png" alt="Image">
+                            </a>
+                        </li>
+                    </ul>
+
+                    <span class="payment">We Accept Payment Via</span>
+
+                    <ul class="payment-option">
+                        <li>
+                            <img src="assets/images/payment/payment-1.png" alt="Image">
+                        </li>
+                        <li>
+                            <img src="assets/images/payment/payment-2.png" alt="Image">
+                        </li>
+                        <li>
+                            <img src="assets/images/payment/payment-3.png" alt="Image">
+                        </li>
+                        <li>
+                            <img src="assets/images/payment/payment-4.png" alt="Image">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Footer  Area -->
+
+<!-- Start Copy Right Area -->
+<div class="copy-right-area">
+    <div class="container">
+        <p>© Ehay is Proudly Owned by <a href="https://envytheme.com/" target="_blank">EnvyTheme</a></p>
+    </div>
+</div>
+<!-- End Copy Right Area -->
+
+<!-- Start Newsletter Modal -->
+<div class="popup-overlay popup-hide">
+    <div class="container">
+        <div class="align-middle">
+            <div class="popup-body">
+                <div class="popup-close">
+                    <i class="ri-close-fill"></i>
                 </div>
 
-                <div class="col-lg-4  col-md-6">
-                    <div class="call-to-action-right">
-                        <div class="widget_newsletter">
-                            <div class="newsletter-bx">
-                                <form role="search" method="post">
-                                    <div class="input-group">
-                                        <input name="news-letter" class="form-control" placeholder="ENTER YOUR EMAIL" type="text">
-                                        <span class="input-group-btn">
-                                                    <button type="submit" class="site-button"><i class="fa fa-paper-plane-o"></i></button>
-                                                </span>
-                                    </div>
-                                </form>
-                            </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="modal-newsletter">
+                            <h3>Subscribe To Our Newsletter</h3>
+                            <p>Sign up for our mailing list to get the latest updates & offers.</p>
+
+                            <form class="newsletter-form" data-toggle="validator">
+                                <input type="email" class="form-control" placeholder="Enter email address"
+                                       name="EMAIL" required="" autocomplete="off">
+
+                                <button class="default-btn black-btn" type="submit">
+                                    Subscribe
+                                </button>
+                                <div id="validator-newsletter-2" class="form-result"></div>
+
+                                <div class="agree-label">
+                                    <input type="checkbox" id="chb1">
+                                    <label for="chb1">
+                                        Do Not Show This Popup Again
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="newsletter-img">
+                            <img src="assets/images/newsletter-img.jpg" alt="Image">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- FOOTER BLOCKES START -->
-    <div class="footer-top overlay-wraper">
-        <div class="overlay-main"></div>
-        <div class="container">
-            <div class="row">
-                <!-- ABOUT COMPANY -->
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="widget widget_about">
-                        <!--<h4 class="widget-title">About Company</h4>-->
-                        <div class="logo-footer clearfix p-b15">
-                            <a href="index.html"><img src="images/logo-dark.png" alt=""></a>
-                        </div>
-                        <p class="max-w400">Today we can tell you, thanks to your passion, hard work creativity, and expertise, you delivered us the most beautiful house great looks.</p>
-
-                        <ul class="social-icons  mt-social-links">
-                            <li><a href="https://www.google.com" class="fa fa-google"></a></li>
-                            <li><a href="https://rss.com" class="fa fa-rss"></a></li>
-                            <li><a href="https://www.facebook.com" class="fa fa-facebook"></a></li>
-                            <li><a href="https://twitter.com" class="fa fa-twitter"></a></li>
-                            <li><a href="https://in.linkedin.com" class="fa fa-linkedin"></a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- RESENT POST -->
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="widget widget_address_outer">
-                        <h4 class="widget-title">Contact Us</h4>
-                        <ul class="widget_address">
-                            <li>34/7 Liverpool Street, Suite 636, London, United Kingdom</li>
-                            <li>7xthemedemo@gmail.com</li>
-                            <li>(+298) 012-3456-789</li>
-                            <li>(+298) 146-6543-480</li>
-                        </ul>
-
-                    </div>
-                </div>
-
-                <!-- USEFUL LINKS -->
-                <div class="col-lg-3 col-md-6 col-sm-6 footer-col-3">
-                    <div class="widget widget_services inline-links">
-                        <h4 class="widget-title">Useful links</h4>
-                        <ul>
-                            <li><a href="about-1.html">About</a></li>
-                            <li><a href="project-grid.html">Projects</a></li>
-                            <li><a href="blog-grid.html">Blog</a></li>
-                            <li><a href="contact-1.html">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- TAGS -->
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="widget recent-posts-entry-date">
-                        <h4 class="widget-title">Resent Post</h4>
-                        <div class="widget-post-bx">
-                            <div class="bdr-light-blue widget-post clearfix  bdr-b-1 m-b10 p-b10">
-                                <div class="mt-post-date text-center text-uppercase text-white p-tb5">
-                                    <strong class="p-date">24</strong>
-                                    <span class="p-month">April</span>
-                                    <span class="p-year">2023</span>
-                                </div>
-                                <div class="mt-post-info">
-                                    <div class="mt-post-header">
-                                        <h6 class="post-title"><a href="blog-single.html">On these beams, we’re building dreams.</a></h6>
-                                    </div>
-                                    <div class="mt-post-meta">
-                                        <ul>
-                                            <li class="post-author"><i class="fa fa-user"></i>By Admin</li>
-                                            <li class="post-comment"><i class="fa fa-comments"></i> 28</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bdr-light-blue widget-post clearfix  bdr-b-1 m-b10 p-b10">
-                                <div class="mt-post-date text-center text-uppercase text-white p-tb5">
-                                    <strong class="p-date">30</strong>
-                                    <span class="p-month">May</span>
-                                    <span class="p-year">2023</span>
-                                </div>
-                                <div class="mt-post-info">
-                                    <div class="mt-post-header">
-                                        <h6 class="post-title"><a href="blog-single.html">We’ll be a sensation for you next renovation</a></h6>
-                                    </div>
-                                    <div class="mt-post-meta">
-                                        <ul>
-                                            <li class="post-author"><i class="fa fa-user"></i>By Admin</li>
-                                            <li class="post-comment"><i class="fa fa-comments"></i> 29</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- NEWSLETTER -->
-
-            </div>
-        </div>
-    </div>
-    <!-- FOOTER COPYRIGHT -->
-    <div class="footer-bottom overlay-wraper">
-        <div class="overlay-main"></div>
-        <div class="container">
-            <div class="row">
-                <div class="mt-footer-bot-center">
-                    <span class="copyrights-text">© 2023 Your Company. Designed By 7xtheme.</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- FOOTER END -->
+</div>
+<!-- End Newsletter Modal -->
+<!-- Start Go Top Area -->
+<div class="go-top">
+    <i class="ri-arrow-up-s-fill"></i>
+    <i class="ri-arrow-up-s-fill"></i>
+</div>
+<!-- End Go Top Area -->

@@ -51,73 +51,69 @@
                                         </li>
                                     </ul>
 
+                                    @php
+                                        $languages = ['uz' => 'UZ', 'en' => 'EN', 'ru' => 'RU'];
+                                    @endphp
+
                                     <div class="tab-content pt-3">
-                                        <div class="tab-pane fade show active" id="uzContent">
-                                            <div class="form-group pb-3">
-                                                <label for="name_uz">Название (UZ):</label>
-                                                <input type="text" class="form-control" id="name_uz" name="name_uz" value="{{ old('name_uz') }}" required>
-                                            </div>
+                                        @foreach ($languages as $code => $label)
+                                            <div class="tab-pane fade {{ $loop->first ? 'show active' : '' }}" id="{{ $code }}Content">
+                                                <div class="form-group pb-3">
+                                                    <label for="name_{{ $code }}">Название ({{ $label }}):</label>
+                                                    <input type="text" class="form-control" id="name_{{ $code }}" name="name_{{ $code }}" value="{{ old('name_' . $code, $product->{"name_$code"} ?? '') }}" required>
+                                                </div>
 
-                                            <div class="form-group pb-3">
-                                                <label for="description_uz">Описание (UZ):</label>
-                                                <textarea class="form-control" id="description_uz" name="description_uz" rows="3">{{ old('description_uz') }}</textarea>
-                                            </div>
+                                                <div class="form-group pb-3">
+                                                    <label for="description_{{ $code }}">Описание ({{ $label }}):</label>
+                                                    <textarea class="form-control" id="description_{{ $code }}" name="description_{{ $code }}" rows="3">{{ old('description_' . $code, $product->{"description_$code"} ?? '') }}</textarea>
+                                                </div>
 
-                                            <div class="form-group pb-3">
-                                                <label for="content_uz">Содержимое (UZ):</label>
-                                                <div id="editor_uz" style="height:400px;"></div>
-                                                <input type="hidden" id="text_uz" name="content_uz">
+                                                <div class="form-group pb-3">
+                                                    <label for="content_{{ $code }}">Содержимое ({{ $label }}):</label>
+                                                    <div id="editor_{{ $code }}" style="height:200px;"></div>
+                                                    <input type="hidden" id="text_{{ $code }}" name="content_{{ $code }}" value="{{ old('content_' . $code, $product->{"content_$code"} ?? '') }}">
+                                                </div>
                                             </div>
-                                        </div>
-
-                                        <div class="tab-pane fade" id="enContent">
-                                            <div class="form-group pb-3">
-                                                <label for="name_en">Название (EN):</label>
-                                                <input type="text" class="form-control" id="name_en" name="name_en" value="{{ old('name_en') }}" required>
-                                            </div>
-
-                                            <div class="form-group pb-3">
-                                                <label for="description_en">Описание (EN):</label>
-                                                <textarea class="form-control" id="description_en" name="description_en" rows="3">{{ old('description_en') }}</textarea>
-                                            </div>
-
-                                            <div class="form-group pb-3">
-                                                <label for="content_en">Содержимое (EN):</label>
-                                                <div id="editor_en" style="height:400px;"></div>
-                                                <input type="hidden" id="text_en" name="content_en">
-                                            </div>
-                                        </div>
-
-                                        <div class="tab-pane fade" id="ruContent">
-                                            <div class="form-group pb-3">
-                                                <label for="name_ru">Название (RU):</label>
-                                                <input type="text" class="form-control" id="name_ru" name="name_ru" value="{{ old('name_ru') }}" required>
-                                            </div>
-
-                                            <div class="form-group pb-3">
-                                                <label for="description_ru">Описание (RU):</label>
-                                                <textarea class="form-control" id="description_ru" name="description_ru" rows="3">{{ old('description_ru') }}</textarea>
-                                            </div>
-
-                                            <div class="form-group pb-3">
-                                                <label for="content_ru">Содержимое (RU):</label>
-                                                <div id="editor_ru" style="height:400px;"></div>
-                                                <input type="hidden" id="text_ru" name="content_ru">
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
+
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="card stretch">
-                                <div class="card-header">
-                                    <h5 class="card-title">Изображение продукта</h5>
-                                </div>
                                 <div class="card-body p-4">
+                                    <div class="form-group pb-3">
+                                        <select name="category_id" id="category_id" class="form-control" data-select2-selector="status">
+                                            <option selected disabled>Categoriya tanlang ...</option>
+                                            @foreach($categories as $item)
+                                                <option value="{{ $item->id }}">{{ $item->name_ru }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="form-group pb-3">
+                                        <label for="price">Price :</label>
+                                        <input type="text" class="form-control" id="price" name="price" value="{{ old('price') }}" required>
+                                    </div>
+                                    <div class="form-group pb-3">
+                                        <label for="discount">Discount :</label>
+                                        <input type="text" class="form-control" id="discount_percent" name="discount_percent" value="{{ old('discount_percent') }}" required>
+                                    </div>
+                                    <div class="form-group pb-3">
+                                        <select name="type" id="type" class="form-control" data-select2-selector="status">
+                                            <option selected disabled>Turini tanlang ...</option>
+                                            @foreach(\App\Models\Product::typeArr() as  $value => $str)
+                                                <option value="{{ $value }}">{{ $str }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                     <div class="form-group pb-3">
                                         <label for="image">Изображение:</label>
                                         <input type="file" class="form-control" id="image" name="image">
+                                    </div>
+                                    <div class="form-group pb-3">
+                                        <label for="images">Изображение (4):</label>
+                                        <input type="file" class="form-control" id="images" name="images">
                                     </div>
                                 </div>
                             </div>
