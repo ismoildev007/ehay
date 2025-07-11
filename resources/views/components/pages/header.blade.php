@@ -1,3 +1,40 @@
+
+<!-- Toast konteyner -->
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 9999">
+    {{-- Success Toast --}}
+    @if(session('success'))
+        <div class="toast align-items-center text-bg-success border-0 show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    {{ session('success') }}
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                        data-bs-dismiss="toast" aria-label="Yopish"></button>
+            </div>
+        </div>
+    @endif
+
+    {{-- Error Toast --}}
+    @if ($errors->any())
+        <div class="toast align-items-center text-bg-danger border-0 show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <strong>Xatoliklar:</strong>
+                    <ul class="mb-0">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                        data-bs-dismiss="toast" aria-label="Yopish"></button>
+            </div>
+        </div>
+    @endif
+</div>
+
+
+
 <!-- Start Header Area -->
 <header class="header-area">
     <!-- Start Top Header -->
@@ -248,3 +285,5 @@
     <!-- End Navbar Area -->
 </header>
 <!-- End Header Area -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

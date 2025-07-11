@@ -170,7 +170,8 @@
             <div class="contact-form">
                 <h2>Leave A Message</h2>
 
-                <form id="contactForm">
+                <form id="contactForm" action="{{ route('order.store') }}" method="POST">
+                    @csrf
                     <div class="row">
                         <div class="col-lg-6 col-sm-6">
                             <div class="form-group">
@@ -182,24 +183,8 @@
 
                         <div class="col-lg-6 col-sm-6">
                             <div class="form-group">
-                                <label>Email</label>
-                                <input type="email" name="email" id="email" class="form-control" required="" data-error="Please enter your email">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-sm-6">
-                            <div class="form-group">
                                 <label>Phone</label>
                                 <input type="text" name="phone_number" id="phone_number" required="" data-error="Please enter your number" class="form-control">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-sm-6">
-                            <div class="form-group">
-                                <label>Subject</label>
-                                <input type="text" name="msg_subject" id="msg_subject" class="form-control" required="" data-error="Please enter your subject">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -219,7 +204,7 @@
                                         <input name="gridCheck" value="I agree to the terms and privacy policy." class="form-check-input" type="checkbox" id="gridCheck" required="">
 
                                         <label class="form-check-label" for="gridCheck">
-                                            I agree to the <a href="terms-conditions.html">Terms</a> and <a href="privacy-policy.html">Privacy Policy</a>
+                                            I agree to the <a href="javascript: void(0)">Terms</a> and <a href="javascript: void(0)">Privacy Policy</a>
                                         </label>
                                         <div class="help-block with-errors gridCheck-error"></div>
                                     </div>

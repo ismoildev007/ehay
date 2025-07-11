@@ -23,7 +23,6 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Title -->
     <title>Ehay - Tools Store eCommerce HTML Template</title>
@@ -37,42 +36,6 @@
     </div>
 </div>
 <!-- End Preloader Area -->
-
-<!-- Toast konteyner -->
-<div class="position-fixed top-0 end-0 p-3" style="z-index: 9999">
-    {{-- Success Toast --}}
-    @if(session('success'))
-        <div class="toast align-items-center text-bg-success border-0 show" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="d-flex">
-                <div class="toast-body">
-                    {{ session('success') }}
-                </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto"
-                        data-bs-dismiss="toast" aria-label="Yopish"></button>
-            </div>
-        </div>
-    @endif
-
-    {{-- Error Toast --}}
-    @if ($errors->any())
-        <div class="toast align-items-center text-bg-danger border-0 show" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="d-flex">
-                <div class="toast-body">
-                    <strong>Xatoliklar:</strong>
-                    <ul class="mb-0">
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto"
-                        data-bs-dismiss="toast" aria-label="Yopish"></button>
-            </div>
-        </div>
-    @endif
-</div>
-
-
 @include('components.pages.header')
 
 @yield('content')
@@ -80,7 +43,6 @@
 @include('components.pages.footer')
 
 <!-- Jquery Min JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script src="/assets/js/jquery.min.js"></script>

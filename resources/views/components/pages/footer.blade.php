@@ -57,27 +57,18 @@
 
             <div class="col-lg-3 col-sm-6">
                 <div class="single-footer-widget">
-                    <h3>Information</h3>
+                    <h3>Category</h3>
+                    <?php
+                    $categories = \App\Models\Category::latest()->limit(6)->get();
+                    $lang = app()->getLocale();
+                    ?>
 
                     <ul class="import-link">
-                        <li>
-                            <a href="about.html">About</a>
-                        </li>
-                        <li>
-                            <a href="order-tracking.html">Order Tracking</a>
-                        </li>
-                        <li>
-                            <a href="terms-conditions.html">Terms & Conditions</a>
-                        </li>
-                        <li>
-                            <a href="store-location.html">Store Location</a>
-                        </li>
-                        <li>
-                            <a href="privacy-policy.html">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="faq.html">Delivery Information</a>
-                        </li>
+                        @foreach($categories as $category)
+                            <li>
+                                <a href="{{ route('category.product', $category['slug_' . $lang]) }}">{{ $category['name_' . $lang] }}</a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -88,22 +79,19 @@
 
                     <ul class="import-link">
                         <li>
-                            <a href="faq.html">Help Center</a>
+                            <a href="/">Home</a>
                         </li>
                         <li>
-                            <a href="products.html">Products</a>
+                            <a href="{{ route('about') }}">About</a>
                         </li>
                         <li>
-                            <a href="terms-conditions.html">Money-back Guarantee!</a>
+                            <a href="{{ route('products') }}">Products</a>
                         </li>
                         <li>
-                            <a href="blog.html">Blog</a>
+                            <a href="{{ route('blogs') }}">Blog</a>
                         </li>
                         <li>
-                            <a href="privacy-policy.html">Accessibility</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">Contact</a>
+                            <a href="{{ route('contact') }}">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -117,12 +105,12 @@
                     <ul class="app-btn">
                         <li>
                             <a href="https://www.apple.com/store" target="_blank">
-                                <img src="assets/images/app-store.png" alt="Image">
+                                <img src="/assets/images/app-store.png" alt="Image">
                             </a>
                         </li>
                         <li>
                             <a href="https://play.google.com/store/apps" target="_blank">
-                                <img src="assets/images/google-play.png" alt="Image">
+                                <img src="/assets/images/google-play.png" alt="Image">
                             </a>
                         </li>
                     </ul>
@@ -131,16 +119,16 @@
 
                     <ul class="payment-option">
                         <li>
-                            <img src="assets/images/payment/payment-1.png" alt="Image">
+                            <img src="/assets/images/payment/payment-1.png" alt="Image">
                         </li>
                         <li>
-                            <img src="assets/images/payment/payment-2.png" alt="Image">
+                            <img src="/assets/images/payment/payment-2.png" alt="Image">
                         </li>
                         <li>
-                            <img src="assets/images/payment/payment-3.png" alt="Image">
+                            <img src="/assets/images/payment/payment-3.png" alt="Image">
                         </li>
                         <li>
-                            <img src="assets/images/payment/payment-4.png" alt="Image">
+                            <img src="/assets/images/payment/payment-4.png" alt="Image">
                         </li>
                     </ul>
                 </div>
@@ -194,7 +182,7 @@
 
                     <div class="col-lg-6">
                         <div class="newsletter-img">
-                            <img src="assets/images/newsletter-img.jpg" alt="Image">
+                            <img src="/assets/images/newsletter-img.jpg" alt="Image">
                         </div>
                     </div>
                 </div>
