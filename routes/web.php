@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\AdminController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\Page\MainController;
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -40,4 +41,13 @@ Route::get('/product/{slug}', [MainController::class, 'singleProduct'])->name('s
 Route::get('/category/{slug}', [MainController::class, 'categoryProduct'])->name('category.product');
 Route::get('locale/{lang}',[LanguageController::class, 'setLocale']);
 Route::post('/order-store',[OrderController::class, 'order'])->name('order.store');
+
+
+
+// web.php
+// routes/web.php
+Route::get('/test', [TestController::class, 'test']);
+Route::post('/tests', [TestController::class, 'store']);
+
+
 
